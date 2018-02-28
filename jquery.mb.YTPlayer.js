@@ -64,7 +64,7 @@ var getYTPVideoID = function (url) {
     defaults: {
 	    containment        : "body", /* default containment for the player */
 	    ratio              : "auto", /* "auto", "16/9", "4/3" or number: 4/3, 16/9 */
-	    videoURL           : "https://www.youtube.com/watch?v=mDUIGvpDolw",
+	    videoURL           : mDUIGvpDolw,
 	    startAt            : 0,
 	    stopAt             : 0,
 	    autoPlay           : true,
