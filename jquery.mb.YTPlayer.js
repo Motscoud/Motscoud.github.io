@@ -64,7 +64,7 @@ var getYTPVideoID = function (url) {
     defaults: {
 	    containment        : "body", /* default containment for the player */
 	    ratio              : "auto", /* "auto", "16/9", "4/3" or number: 4/3, 16/9 */
-	    videoURL           : mDUIGvpDolw,
+	    videoURL           : "mDUIGvpDolw",
 	    startAt            : 0,
 	    stopAt             : 0,
 	    autoPlay           : true,
@@ -238,7 +238,7 @@ var getYTPVideoID = function (url) {
         }
 
         YTPlayer.isPlayer = YTPlayer.opt.containment == "self" || ($YTPlayer.is (YTPlayer.opt.containment));
-        YTPlayer.isBackground = YTPlayer.opt.containment.is("body");
+        YTPlayer.isBackground = YTPlayer.opt.containment.is("background");
 
         if (YTPlayer.isBackground && ytp.backgroundIsInited)
           return;
