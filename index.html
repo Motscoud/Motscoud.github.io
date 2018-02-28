@@ -1,5 +1,42 @@
 <title>Steamed Hams!</title>
 <link href="/dist/css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 <body>
+  <script type="text/rocketscript">
+		
+			var myPlayer;
+			jQuery(function () {
+
+				
+				myPlayer = jQuery("#bgndVideo").YTPlayer({align:"center,center"});
+
+				var startTime = new Date(1519821283000);
+					outputDiv = document.getElementById('mincount'); // or $('#output').get(0)
+				
+				
+				setInterval(function () {
+					var min = Math.floor((new Date() - startTime)/1000/60);
+					var s = "";
+					if(min != 1){
+						s = "s"
+					}
+					outputDiv.innerHTML = min+" minute"+s+"!";
+				}, 60);
+				
+				setTimeout(function () {
+					$("#loading").fadeOut(3000);
+					$( "#help" ).click(function() {
+						console.log("test");
+						$( "#helptext" ).toggle();
+					});
+				},3000);
+				
+				setInterval(function () {
+					$("#stats").load('/live');
+				},60000);
+				$("#stats").load('/live');
+				
+				
+			});
+		</script>
 <div id="bgndVideo" class="player" data-property="{videoURL:'mDUIGvpDolw',containment:'body', showControls:false, autoPlay:true, loop:true, vol:50, mute:false, startAt:6, opacity:1, addRaster:false, quality:'large', optimizeDisplay:true, stopMovieOnBlur:false, showYTLogo:false}"></div>
 </body>
